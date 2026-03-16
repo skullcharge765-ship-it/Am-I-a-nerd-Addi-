@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quick Question 😏</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #f2f2f2;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+            border: none;
+        }
+        #yesBtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #noBtn {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Are you nerdy? 🤓</h1>
+
+    <button id="yesBtn" onclick="yesClicked()">Yes</button>
+    <button id="noBtn" onclick="noClicked()">No</button>
+
+    <h2 id="message"></h2>
+
+    <script>
+        let yesCount = 0;
+
+        function yesClicked() {
+            yesCount++;
+
+            if (yesCount === 1) {
+                document.getElementById("message").innerText = "Are you sure? 👀";
+            } 
+            else if (yesCount === 2) {
+                document.getElementById("message").innerText = "100%? 🤔";
+            } 
+            else if (yesCount >= 3) {
+                document.getElementById("message").innerText = 
+                "Oh well... you're the one who has an interest in me 😌";
+            }
+        }
+
+        function noClicked() {
+            document.getElementById("message").innerText = 
+            "Thanks, but I know I am 😂";
+        }
+    </script>
+
+</body>
+</html>
